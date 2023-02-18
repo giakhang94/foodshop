@@ -1,0 +1,107 @@
+.navbar {
+    background-color: var(--backGroundColor);
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 120px;
+    // width: 100%;
+    .logo {
+        width: 80px;
+    }
+}
+.left-side {
+    // flex 50% với justify-content: space-between là y chang nhau (nếu divContainer chỉ có 2 divChild)
+    // flex: 50%;
+}
+.right-side {
+    color: var(--lightColor);
+    .right-item {
+        padding: 20px;
+        text-decoration: none;
+        color: var(--lightColor);
+        display: block;
+        cursor: pointer;
+    }
+    .right-side-menu {
+        display: flex;
+    }
+    .right-side-mobile {
+        display: none;
+    }
+    .mobile-menu {
+        list-style-type: none;
+        background-color: var(--backGroundColor);
+    }
+    .cart {
+        position: relative;
+        span {
+            position: absolute;
+            top: 15px;
+            right: 10px;
+        }
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 740px) {
+    .navbar {
+        padding: 0 80px;
+    }
+}
+@media (max-width: 739px) {
+    .navbar {
+        padding: 0 50px;
+        width: 100%;
+        position: relative;
+        height: 80px;
+        .logo {
+            width: 50px;
+        }
+    }
+    .right-side {
+        .right-side-menu {
+            display: none;
+        }
+        .right-side-mobile {
+            display: block;
+        }
+        .mobile-icon {
+            font-size: 25px;
+        }
+
+        .mobile-menu {
+            display: none;
+            padding: 20px 20px;
+            width: 250px;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin: 0px;
+            cursor: pointer;
+            z-index: 3;
+            margin-top: -30px;
+        }
+        .mobile-menu-item {
+            padding: 5px 0px;
+            font-size: 16px;
+        }
+        .menu-item-link {
+            color: var(--lightColor);
+            text-decoration: none;
+        }
+    }
+    .mobile-icon:hover .mobile-menu {
+        display: block;
+    }
+    .mobile-menu:hover {
+        display: block;
+    }
+    .mobile--icon {
+        display: flex;
+        align-items: center;
+        .cart {
+            font-size: 16px;
+            padding-top: 25px;
+        }
+    }
+}

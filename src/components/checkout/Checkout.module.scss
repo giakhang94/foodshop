@@ -1,0 +1,142 @@
+.checkout {
+    min-height: 100vh;
+    width: 100%;
+}
+.checkout-list {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 30px;
+}
+.checkout-list .cart-food {
+    min-width: 100px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 10px 20px;
+    .cart-img {
+        position: relative;
+        flex: 1;
+        .cart-item-clear {
+            background-color: rgba(231, 31, 114, 0.673);
+            color: var(--lightColor);
+            padding: 0;
+            font-size: 20px;
+            border-radius: 2px;
+            position: absolute;
+            top: 0;
+            right: 100%;
+            transform: translateX(-50%);
+            cursor: pointer;
+        }
+    }
+    img {
+        width: 150px;
+        height: 100px;
+        object-fit: cover;
+        margin-right: 10px;
+    }
+    .cart-title {
+        flex: 1;
+    }
+    h4 {
+        font-weight: 600;
+        font-size: 10;
+        width: 350px;
+        display: block;
+    }
+    span {
+        font-weight: 600;
+        color: green;
+    }
+    .cart-count-and-btn {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+    }
+    .pricexcount {
+        flex: 1;
+    }
+    .cart-title-mobile {
+        display: none;
+    }
+    // .btn-container {
+    //     display: flex;
+    //     align-items: center;
+    // }
+    .btn {
+        border: none;
+        background-color: transparent;
+        margin: 0 5px;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .btn-remove {
+        color: red;
+        margin-left: 10px;
+    }
+}
+.subTotal {
+    text-align: center;
+    margin-top: 30px;
+}
+.total {
+    color: green;
+}
+//mobile
+@media (max-width: 739px) {
+    .checkout .checkout-list {
+        margin: 10px;
+    }
+    .checkout .cart-food .cart-title-mobile {
+        font-size: 12px;
+    }
+    .checkout .cart-food {
+        width: 100%;
+        height: fit-content;
+    }
+    .checkout .cart-food .pricexcount {
+        font-size: 12px;
+        display: flex;
+        // width: 300px;
+        margin-left: 0;
+    }
+    .checkout .cart-food img {
+        width: 100px;
+        min-width: none;
+        height: 80px;
+        object-fit: cover;
+    }
+    //ẩn hiện title có ..... do dùng <TextDisplay />
+    .checkout-list .cart-food .cart-title-mobile {
+        display: block;
+        width: 80px;
+    }
+    .checkout-list .cart-food .cart-title {
+        display: none;
+    }
+}
+@media (max-width: 400px) {
+    .checkout .checkout-list .cart-food {
+        display: flex;
+        justify-content: center;
+    }
+    .checkout .cart-food span {
+        padding: 2px;
+    }
+    .checkout .cart-food {
+        width: 100%;
+        height: fit-content;
+    }
+    .checkout .cart-food img {
+        width: 60px;
+        min-width: none;
+        height: 40px;
+        object-fit: cover;
+    }
+}

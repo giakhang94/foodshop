@@ -1,0 +1,24 @@
+.footer {
+    height: 150px;
+    width: auto;
+    background-color: var(--backGroundColor);
+    color: var(--lightColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer .social {
+    display: flex;
+    margin-bottom: 5px;
+    .social-icon {
+        font-size: 35px;
+        margin: 0 8px;
+        color: var(--lightColor);
+        text-decoration: none;
+    }
+}
+.footer .copyright {
+    margin: 10px;
+    font-size: 12px;
+}
